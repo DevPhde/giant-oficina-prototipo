@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giant Auto Mec&acirc;nica | Especialistas em Pintura e Funilaria no Rio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blue-900: #0f2ccf;
+        --blue-700: #2044ff;
+        --blue-100: #e6ecff;
+        --orange-500: #ea492e;
+        --gray-900: #111217;
+        --gray-700: #30323c;
+        --gray-600: #454857;
+        --gray-500: #60636f;
+        --gray-200: #f4f6ff;
+        --gray-100: #ffffff;
+        --radius-lg: 20px;
+        --radius-md: 14px;
+        --radius-sm: 10px;
+        --shadow-lg: 0 30px 80px rgba(15, 44, 207, 0.18);
+        --shadow-sm: 0 16px 40px rgba(17, 18, 23, 0.08);
+        --container-width: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+        background: var(--gray-200);
+        color: var(--gray-900);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(100%, var(--container-width));
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .pre-header {
+        background: linear-gradient(90deg, var(--blue-900), #081a8c);
+        color: var(--gray-100);
+        font-size: 0.85rem;
+      }
+
+      .pre-header .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 24px;
+      }
+
+      .pre-header span {
+        opacity: 0.85;
+      }
+
+      .whatsapp-link {
+        margin-left: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 18px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        transition: background 0.2s ease;
+      }
+
+      .whatsapp-link:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      header.main-header {
+        background: var(--gray-100);
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        box-shadow: 0 10px 30px rgba(15, 44, 207, 0.08);
+      }
+
+      .main-header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 24px;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        height: 60px;
+        flex-shrink: 0;
+        display: block;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        font-weight: 500;
+        font-size: 0.95rem;
+        flex: 1 1 auto;
+      }
+
+      nav a {
+        color: var(--gray-700);
+        transition: color 0.2s ease;
+      }
+
+      nav a:hover {
+        color: var(--blue-900);
+      }
+
+      .cta-header {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: var(--orange-500);
+        color: var(--gray-100);
+        font-weight: 600;
+        box-shadow: 0 18px 45px rgba(234, 73, 46, 0.32);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        flex-shrink: 0;
+      }
+
+      .cta-header:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 55px rgba(234, 73, 46, 0.42);
+      }
+
+      .menu-toggle {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        border: 1px solid rgba(17, 18, 23, 0.12);
+        background: transparent;
+        font-weight: 600;
+        color: var(--gray-700);
+        cursor: pointer;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .menu-toggle__icon {
+        position: relative;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+      }
+
+      .menu-toggle__icon::before,
+      .menu-toggle__icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        transition: transform 0.2s ease;
+      }
+
+      .menu-toggle__icon::before {
+        top: -6px;
+      }
+
+      .menu-toggle__icon::after {
+        top: 6px;
+      }
+
+      .hero {
+        position: relative;
+        padding: 110px 0 120px;
+        background: linear-gradient(140deg, #b9d9ff, #5c82ff);
+        color: var(--gray-100);
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 25% 25%,
+          rgba(255, 255, 255, 0.25),
+          transparent 55%
+        );
+        opacity: 0.4;
+        mix-blend-mode: normal;
+        pointer-events: none;
+      }
+
+      .hero .container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 48px;
+        align-items: center;
+        z-index: 1;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        font-size: 0.85rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 20px 0 24px;
+        font-size: clamp(2.4rem, 4vw, 3.4rem);
+        line-height: 1.1;
+      }
+
+      .hero p {
+        max-width: 500px;
+        margin: 0 0 28px;
+        opacity: 0.85;
+      }
+
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 28px;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: transform 0.2s ease, box-shadow 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--orange-500);
+        color: var(--gray-100);
+        box-shadow: 0 20px 60px rgba(234, 73, 46, 0.35);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 25px 70px rgba(234, 73, 46, 0.45);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: var(--gray-100);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .hero-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 16px;
+        color: rgba(255, 255, 255, 0.92);
+      }
+
+      .hero-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 0.95rem;
+      }
+
+      .hero-list li::before {
+        content: "\2713";
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(234, 73, 46, 0.9);
+        display: grid;
+        place-items: center;
+        font-size: 0.75rem;
+        margin-top: 2px;
+      }
+
+      .hero-media {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-media figcaption {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: 20px 24px;
+        background: linear-gradient(
+          0deg,
+          rgba(10, 13, 48, 0.92),
+          transparent
+        );
+      }
+
+      .hero-media strong {
+        font-size: 1.1rem;
+      }
+
+      .metrics {
+        background: var(--gray-100);
+        margin-top: -60px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        position: relative;
+        z-index: 2;
+      }
+
+      .metrics .container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+        padding: 32px 24px;
+      }
+
+      .metric {
+        text-align: center;
+        border-right: 1px solid rgba(15, 44, 207, 0.12);
+      }
+
+      .metric:last-child {
+        border-right: none;
+      }
+
+      .metric h3 {
+        margin: 0;
+        font-size: 2rem;
+        color: var(--blue-900);
+      }
+
+      .metric p {
+        margin: 8px 0 0;
+        color: var(--gray-500);
+        font-size: 0.95rem;
+      }
+
+      section {
+        padding: 96px 0;
+      }
+
+      section.light {
+        background: var(--gray-100);
+      }
+
+      section .section-header {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 60px;
+      }
+
+      section .section-header h2 {
+        margin: 0 0 16px;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        color: var(--blue-900);
+      }
+
+      section .section-header p {
+        margin: 0;
+        color: var(--gray-500);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .service-card {
+        border-radius: var(--radius-md);
+        background: linear-gradient(180deg, var(--gray-100), var(--gray-200));
+        padding: 32px;
+        box-shadow: var(--shadow-sm);
+        display: grid;
+        gap: 16px;
+      }
+
+      .service-card h3 {
+        margin: 0;
+        color: var(--gray-900);
+        font-size: 1.4rem;
+      }
+
+      .service-card ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--gray-500);
+        font-size: 0.95rem;
+      }
+
+      .process {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .process-step {
+        padding: 32px;
+        border-radius: var(--radius-md);
+        background: var(--gray-100);
+        box-shadow: var(--shadow-sm);
+        display: grid;
+        gap: 12px;
+      }
+
+      .process-step span {
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: var(--blue-700);
+        text-transform: uppercase;
+      }
+
+      .process-step h3 {
+        margin: 0;
+        color: var(--gray-900);
+        font-size: 1.3rem;
+      }
+
+      .process-step p {
+        margin: 0;
+        color: var(--gray-500);
+        font-size: 0.95rem;
+      }
+
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 32px;
+      }
+
+      .chip {
+        padding: 10px 18px;
+        border-radius: 999px;
+        border: 1px solid rgba(15, 44, 207, 0.18);
+        background: var(--blue-100);
+        color: var(--blue-900);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 48px;
+        align-items: center;
+      }
+
+      .about-text span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        color: var(--blue-700);
+      }
+
+      .about-text h2 {
+        margin: 16px 0 20px;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        color: var(--gray-900);
+      }
+
+      .about-text p {
+        margin: 0 0 18px;
+        color: var(--gray-600);
+      }
+
+      .about-highlights {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .about-highlights li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--gray-700);
+        font-weight: 500;
+      }
+
+      .about-highlights li::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--orange-500);
+      }
+
+      .about-image {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        position: relative;
+      }
+
+      .about-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .about-image figcaption {
+        position: absolute;
+        inset: auto 18px 18px 18px;
+        background: rgba(10, 21, 73, 0.88);
+        color: var(--gray-100);
+        padding: 18px 20px;
+        border-radius: var(--radius-md);
+        box-shadow: 0 18px 40px rgba(10, 21, 73, 0.35);
+      }
+
+      .about-values {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .about-values span {
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(47, 93, 255, 0.12);
+        color: var(--blue-900);
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+
+      .seguro-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+        align-items: start;
+      }
+
+      .seguro-copy h3 {
+        margin: 0 0 12px;
+        color: var(--gray-900);
+        font-size: 1.6rem;
+      }
+
+      .seguro-copy p {
+        margin: 0 0 18px;
+        color: var(--gray-600);
+      }
+
+      .seguro-copy ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--gray-600);
+        display: grid;
+        gap: 10px;
+      }
+
+      .seguro-card {
+        background: var(--gray-100);
+        border: 1px solid rgba(15, 44, 207, 0.12);
+        border-radius: var(--radius-lg);
+        padding: 28px;
+        box-shadow: var(--shadow-sm);
+        display: grid;
+        gap: 16px;
+      }
+
+      .seguro-card h4 {
+        margin: 0;
+        color: var(--blue-900);
+      }
+
+      .seguro-card p {
+        margin: 0;
+        color: var(--gray-600);
+        font-size: 0.95rem;
+      }
+
+      .seguro-card .chip-row {
+        justify-content: flex-start;
+        margin-top: 12px;
+      }
+
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .testimonial {
+        background: linear-gradient(180deg, var(--gray-100), #f2f5ff);
+        border-radius: var(--radius-md);
+        padding: 32px;
+        box-shadow: var(--shadow-sm);
+        display: grid;
+        gap: 18px;
+        border: 1px solid rgba(15, 44, 207, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .testimonial::before {
+        content: "“";
+        position: absolute;
+        top: 18px;
+        right: 24px;
+        font-size: 4rem;
+        color: rgba(15, 44, 207, 0.08);
+        line-height: 1;
+        font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+      }
+
+      .testimonial p {
+        margin: 0;
+        color: var(--gray-600);
+        font-size: 1rem;
+      }
+
+      .testimonial footer {
+        font-weight: 600;
+        color: var(--blue-900);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: auto;
+      }
+
+      .client-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: rgba(122, 184, 255, 0.25);
+        color: var(--blue-900);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(122, 184, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .client-meta {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+      }
+
+      .client-meta span {
+        color: var(--gray-500);
+        font-size: 0.85rem;
+        margin-top: 4px;
+        font-weight: 500;
+      }
+
+      .testimonial-rating {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--orange-500);
+      }
+
+      .testimonial-rating span {
+        letter-spacing: 0.15em;
+      }
+
+      .testimonial-rating small {
+        color: var(--gray-500);
+        font-weight: 500;
+        letter-spacing: normal;
+      }
+
+      .cta-block {
+        background: linear-gradient(120deg, var(--blue-900), #091a8f);
+        color: var(--gray-100);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        padding: 56px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 48px;
+        align-items: center;
+      }
+
+      .cta-content {
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta-actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+
+      .cta-actions .btn-primary,
+      .cta-actions .btn-secondary {
+        min-width: 220px;
+        justify-content: center;
+      }
+
+      .cta-list {
+        margin: 20px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 12px;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .cta-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .cta-list li::before {
+        content: "\2713";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(234, 73, 46, 0.85);
+        display: grid;
+        place-items: center;
+        font-size: 0.7rem;
+      }
+
+      .contact-box {
+        display: grid;
+        gap: 16px;
+      }
+
+      .contact-item {
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: var(--radius-md);
+        padding: 18px 22px;
+      }
+
+      .contact-item strong {
+        display: block;
+        font-size: 1.05rem;
+      }
+
+      .faq {
+        display: grid;
+        gap: 18px;
+      }
+
+      details {
+        background: var(--gray-100);
+        border-radius: var(--radius-md);
+        padding: 18px 22px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--blue-900);
+      }
+
+      details p {
+        margin: 14px 0 0;
+        color: var(--gray-500);
+      }
+
+      .map {
+        margin-top: 36px;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .map iframe {
+        border: 0;
+        width: 100%;
+        height: 360px;
+      }
+
+      footer {
+        background: #0a1448;
+        color: rgba(255, 255, 255, 0.86);
+        padding: 64px 0 72px;
+      }
+
+      footer .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 32px;
+      }
+
+      footer h4 {
+        margin: 0 0 16px;
+        color: #ffffff;
+      }
+
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .social {
+        display: flex;
+        gap: 14px;
+        margin-top: 12px;
+      }
+
+      .social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        display: grid;
+        place-items: center;
+        transition: background 0.2s ease;
+        font-weight: 600;
+      }
+
+      .social a:hover {
+        background: rgba(255, 255, 255, 0.22);
+      }
+
+      .footer-note {
+        margin-top: 36px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.85rem;
+      }
+
+      .floating-whatsapp {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 16px 35px rgba(37, 211, 102, 0.42);
+        font-weight: 700;
+        z-index: 50;
+        transition: transform 0.2s ease;
+      }
+
+      .floating-whatsapp:hover {
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 1024px) {
+        .main-header .container {
+          gap: 16px;
+        }
+
+        .logo {
+          order: 1;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+          order: 2;
+          margin-left: auto;
+        }
+
+        .cta-header {
+          order: 3;
+          width: 100%;
+          justify-content: center;
+          text-align: center;
+        }
+
+        nav {
+          order: 4;
+          width: 100%;
+          flex: 1 1 100%;
+          display: none;
+          flex-direction: column;
+          background: var(--gray-100);
+          border-radius: var(--radius-md);
+          border: 1px solid rgba(15, 44, 207, 0.08);
+          padding: 18px 20px;
+          margin-top: 8px;
+          gap: 8px;
+          box-shadow: 0 20px 40px rgba(17, 18, 23, 0.08);
+        }
+
+        nav a {
+          padding: 10px 0;
+        }
+
+        .main-header.menu-open nav {
+          display: flex;
+        }
+
+        .main-header.menu-open .menu-toggle {
+          background: rgba(15, 44, 207, 0.08);
+          color: var(--blue-900);
+        }
+
+        .main-header.menu-open .menu-toggle__icon {
+          background: transparent;
+        }
+
+        .main-header.menu-open .menu-toggle__icon::before {
+          transform: translateY(6px) rotate(45deg);
+        }
+
+        .main-header.menu-open .menu-toggle__icon::after {
+          transform: translateY(-6px) rotate(-45deg);
+        }
+
+        .hero .container,
+        .about-grid,
+        .services-grid,
+        .process,
+        .seguro-grid,
+        .testimonials,
+        .cta-block,
+        footer .footer-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .metrics .container {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .metric {
+          border-right: none;
+          border-bottom: 1px solid rgba(15, 44, 207, 0.12);
+          padding-bottom: 24px;
+        }
+
+        .metric:nth-child(odd) {
+          border-right: none;
+        }
+
+        .metric:nth-last-child(-n + 2) {
+          border-bottom: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .pre-header .container {
+          justify-content: center;
+        }
+
+        .whatsapp-link {
+          margin-left: 0;
+        }
+
+        header.main-header {
+          position: static;
+        }
+
+        .hero {
+          padding: 90px 0;
+        }
+
+        .hero .container,
+        .about-grid,
+        .services-grid,
+        .process,
+        .seguro-grid,
+        .testimonials,
+        .cta-block,
+        footer .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metrics {
+          margin-top: -40px;
+        }
+
+        .metrics .container {
+          grid-template-columns: 1fr;
+        }
+
+        section {
+          padding: 72px 0;
+        }
+
+        .hero-media {
+          order: -1;
+        }
+
+        .hero-cta {
+          width: 100%;
+        }
+
+        .hero-cta .btn-primary,
+        .hero-cta .btn-secondary {
+          flex: 1 1 100%;
+          justify-content: center;
+        }
+
+        .cta-actions .btn-primary,
+        .cta-actions .btn-secondary {
+          width: 100%;
+        }
+
+        .floating-whatsapp {
+          width: 52px;
+          height: 52px;
+          right: 18px;
+          bottom: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pre-header">
+      <div class="container">
+        <span>Giant Botafogo: (21) 2266-1844 / 96411-6948</span>
+        <span>Giant Zona Sul: (21) 3495-3804 / 98529-1483</span>
+        <a
+          class="whatsapp-link"
+          href="https://wa.me/5521964116948?text=Ol%C3%A1%20Giant!%20Gostaria%20de%20um%20or%C3%A7amento."
+          >Fale agora com um especialista</a
+        >
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="container">
+        <img
+          class="logo"
+          src="https://static.wixstatic.com/media/d5ec41_769937ccc2084baab79b6467453dae5d~mv2.png/v1/fill/w_190,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%20Giant%20Fundo%20branco_edited.png"
+          alt="Giant Auto Mec&acirc;nica"
+        />
+        <nav id="primary-menu">
+          <a href="#sobre">Sobre n&oacute;s</a>
+          <a href="#servicos">Servi&ccedil;os</a>
+          <a href="#processo">Como trabalhamos</a>
+          <a href="#seguradoras">Seguradoras</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          Menu
+        </button>
+        <a
+          class="cta-header"
+          href="https://wa.me/5521970182069?text=Ol%C3%A1%20Giant!%20Quero%20um%20or%C3%A7amento."
+          >Quero um or&ccedil;amento</a
+        >
+      </div>
+    </header>
+    <section class="hero" id="topo">
+      <div class="container">
+        <div>
+          <span class="badge">Desde 1972</span>
+          <h1>Seu carro pronto para voltar a brilhar com padr&atilde;o de concession&aacute;ria.</h1>
+          <p>
+            A Giant Auto Mec&acirc;nica &eacute; referenciada pelas principais seguradoras do Brasil e
+            atende duas unidades em Botafogo. Funilaria, pintura, mec&acirc;nica e est&eacute;tica com
+            garantia por escrito e acompanhamento completo.
+          </p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="#contato">Falar com consultor</a>
+          </div>
+          <ul class="hero-list">
+            <li>Mais de 50 anos entregando reparos premium em pintura e funilaria.</li>
+            <li>
+              Homologada por Porto Seguro, SulAm&eacute;rica, Bradesco, Allianz, HDI e demais
+              seguradoras.
+            </li>
+            <li>
+              Cabine pressurizada, espectrofotometria e controle de qualidade com fotos das etapas.
+            </li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <img
+            src="https://static.wixstatic.com/media/d5ec41_debe552e509a499b8802257cddfc2690~mv2.png/v1/fill/w_820,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Giant-oficina.png"
+            alt="Estrutura da Giant Auto Mec&acirc;nica"
+          />
+          <figcaption>
+            <strong>Estrutura completa em Botafogo</strong>
+            <p>Duas unidades prontas para receber seu ve&iacute;culo com atendimento personalizado.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="metrics">
+      <div class="container">
+        <div class="metric">
+          <h3>50+</h3>
+          <p>Anos de hist&oacute;ria no Rio de Janeiro.</p>
+        </div>
+        <div class="metric">
+          <h3>2</h3>
+          <p>Unidades em Botafogo para agilizar o atendimento.</p>
+        </div>
+        <div class="metric">
+          <h3>10+</h3>
+          <p>Seguradoras parceiras e referenciadas.</p>
+        </div>
+        <div class="metric">
+          <h3>4.9</h3>
+          <p>Avalia&ccedil;&atilde;o m&eacute;dia dos clientes nas plataformas online.</p>
+        </div>
+      </div>
+    </section>
+    <section class="light" id="sobre">
+      <div class="container about-grid">
+        <div class="about-text">
+          <span>Quem somos</span>
+          <h2>Tradi&ccedil;&atilde;o familiar que cuida do seu carro como se fosse nosso.</h2>
+          <p>
+            A Giant Auto Mec&acirc;nica nasceu em 1972, em Botafogo, e foi constru&iacute;da sobre
+            rela&ccedil;&otilde;es de confian&ccedil;a com clientes, seguradoras e parceiros do
+            automobilismo carioca. Crescemos especializados em funilaria, pintura e mec&acirc;nica,
+            sempre combinando tecnologia de ponta com atendimento humano.
+          </p>
+          <p>
+            Mais de cinco d&eacute;cadas depois, seguimos como refer&ecirc;ncia na Zona Sul do Rio,
+            mantendo a mesma equipe apaixonada por carros e comprometida com transpar&ecirc;ncia em cada
+            etapa do servi&ccedil;o.
+          </p>
+          <ul class="about-highlights">
+            <li>Equipe t&eacute;cnica certificada e treinada continuamente.</li>
+            <li>Parcerias de longa data com clubes e personalidades do esporte.</li>
+            <li>Processos auditados e aprovados pelas principais seguradoras do pa&iacute;s.</li>
+          </ul>
+          <div class="about-values">
+            <span>Tradi&ccedil;&atilde;o</span>
+            <span>Transpar&ecirc;ncia</span>
+            <span>Excel&ecirc;ncia</span>
+            <span>Confian&ccedil;a</span>
+          </div>
+        </div>
+        <figure class="about-image">
+          <img
+            src="https://static.wixstatic.com/media/3b1f25_5d46b97a232547bdb4262fee7fe92f9b.jpg/v1/fill/w_960,h_640,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3b1f25_5d46b97a232547bdb4262fee7fe92f9b.jpg"
+            alt="Equipe Giant Auto Mec&acirc;nica na oficina"
+          />
+          <figcaption>
+            Mais de 50 anos de hist&oacute;ria cuidando de carros que fazem parte da vida dos nossos
+            clientes.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="light" id="servicos">
+      <div class="container">
+        <div class="section-header">
+          <h2>Servi&ccedil;os especializados para recuperar o valor do seu carro.</h2>
+          <p>
+            Fluxo completo de funilaria, pintura, mec&acirc;nica e est&eacute;tica com tecnologia de
+            ponta e equipe certificada.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Pintura Automotiva</h3>
+            <ul>
+              <li>Cabine pressurizada e sala limpa para aplica&ccedil;&atilde;o perfeita.</li>
+              <li>Espectrofotometria para copiar o tom original.</li>
+              <li>Acabamento vitrificado com prote&ccedil;&atilde;o UV.</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <h3>Funilaria Premium</h3>
+            <ul>
+              <li>Reparos estruturais e alinhamento em bancada.</li>
+              <li>Substitui&ccedil;&atilde;o de pe&ccedil;as originais com garantia.</li>
+              <li>Processo PDR para amassados sem pintura.</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <h3>Mec&acirc;nica em Dia</h3>
+            <ul>
+              <li>Diagn&oacute;stico eletr&ocirc;nico completo.</li>
+              <li>Revis&otilde;es de freios, suspens&atilde;o e motor.</li>
+              <li>Check-list certificado entregando o carro pronto para rodar.</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <h3>Est&eacute;tica Automotiva</h3>
+            <ul>
+              <li>Polimento t&eacute;cnico e cristaliza&ccedil;&atilde;o.</li>
+              <li>Higieniza&ccedil;&atilde;o interna completa.</li>
+              <li>
+                Prote&ccedil;&atilde;o de pintura com selantes de longa dura&ccedil;&atilde;o.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="processo">
+      <div class="container">
+        <div class="section-header">
+          <h2>Uma jornada clara do or&ccedil;amento &agrave; entrega.</h2>
+          <p>
+            Organizamos todo o processo para voc&ecirc; acompanhar cada etapa e voltar para a rua com
+            tranquilidade.
+          </p>
+        </div>
+        <div class="process">
+          <div class="process-step">
+            <span>Etapa 1</span>
+            <h3>Diagn&oacute;stico e or&ccedil;amento</h3>
+            <p>
+              Recebemos o ve&iacute;culo, documentamos os danos e alinhamos diretamente com a seguradora
+              ou com voc&ecirc;.
+            </p>
+          </div>
+          <div class="process-step">
+            <span>Etapa 2</span>
+            <h3>Execu&ccedil;&atilde;o com atualiza&ccedil;&otilde;es</h3>
+            <p>
+              Funilaria, prepara&ccedil;&atilde;o e pintura acontecem em ambientes controlados, com fotos
+              do progresso.
+            </p>
+          </div>
+          <div class="process-step">
+            <span>Etapa 3</span>
+            <h3>Controle de qualidade e entrega</h3>
+            <p>
+              Finalizamos com inspe&ccedil;&atilde;o completa, checklist assinado e orienta&ccedil;&atilde;o
+              de cuidados.
+            </p>
+          </div>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Guincho parceiro 24h</span>
+          <span class="chip">Garantia por escrito</span>
+          <span class="chip">Pe&ccedil;as originais</span>
+          <span class="chip">Atendimento humanizado</span>
+        </div>
+      </div>
+    </section>
+    <section class="light" id="seguradoras">
+      <div class="container">
+        <div class="section-header">
+          <h2>Seguradoras e parceiros que confiam na Giant.</h2>
+          <p>
+            Somos oficina referenciada e atendemos sinistros das principais seguradoras do Brasil,
+            al&eacute;m de parcerias com clubes cariocas.
+          </p>
+        </div>
+        <div class="seguro-grid">
+          <div class="seguro-copy">
+            <h3>Atendimento especializado para sinistros.</h3>
+            <p>
+              Nosso time cuida de toda a comunica&ccedil;&atilde;o com a seguradora para que voc&ecirc;
+              acompanhe o reparo sem dores de cabe&ccedil;a.
+            </p>
+            <ul>
+              <li>Consultores dedicados para abertura e libera&ccedil;&atilde;o de sinistros.</li>
+              <li>Acompanhamento das vistorias, laudos e aprova&ccedil;&atilde;o de pe&ccedil;as.</li>
+              <li>Atualiza&ccedil;&otilde;es semanais e suporte com carro reserva via parceiros.</li>
+            </ul>
+          </div>
+          <div class="seguro-card">
+            <h4>Seguradoras parceiras</h4>
+            <p>Atendemos sinistros de:</p>
+            <div class="chip-row">
+              <span class="chip">Porto Seguro</span>
+              <span class="chip">SulAm&eacute;rica</span>
+              <span class="chip">Bradesco Seguros</span>
+              <span class="chip">Allianz</span>
+              <span class="chip">HDI</span>
+              <span class="chip">Mapfre</span>
+              <span class="chip">Clubes do Rio de Janeiro</span>
+            </div>
+            <p>Tamb&eacute;m somos parceiros de clubes e personalidades do Rio de Janeiro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="depoimentos">
+      <div class="container">
+        <div class="section-header">
+          <h2>Clientes que j&aacute; voltaram para a rua com carro de zero.</h2>
+          <p>Depoimentos reais de quem viveu a experi&ecirc;ncia Giant Auto Mec&acirc;nica.</p>
+        </div>
+        <div class="testimonials">
+          <article class="testimonial">
+            <div class="testimonial-rating">
+              <span aria-hidden="true">★★★★★</span>
+              <small>Avalia&ccedil;&atilde;o 5.0</small>
+            </div>
+            <p>
+              &ldquo;Meu carro foi liberado pela seguradora e escolhi a Giant. Recebi atualiza&ccedil;&otilde;es
+              frequentes e o carro voltou impec&aacute;vel, sem diferen&ccedil;a de cor.&rdquo;
+            </p>
+            <footer>
+              <span class="client-avatar" aria-hidden="true">BM</span>
+              <div class="client-meta">
+                <strong>Bruno M.</strong>
+                <span>Cliente Porto Seguro</span>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial">
+            <div class="testimonial-rating">
+              <span aria-hidden="true">★★★★★</span>
+              <small>Avalia&ccedil;&atilde;o 5.0</small>
+            </div>
+            <p>
+              &ldquo;Equipe muito atenciosa. Entregaram antes do prazo, com polimento e limpeza impec&aacute;veis.
+              Recomendo para quem busca padr&atilde;o premium.&rdquo;
+            </p>
+            <footer>
+              <span class="client-avatar" aria-hidden="true">FR</span>
+              <div class="client-meta">
+                <strong>Fernanda R.</strong>
+                <span>Rio de Janeiro</span>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial">
+            <div class="testimonial-rating">
+              <span aria-hidden="true">★★★★★</span>
+              <small>Avalia&ccedil;&atilde;o 5.0</small>
+            </div>
+            <p>
+              &ldquo;Sou gestor de frota e confio na Giant h&aacute; anos. Processo organizado, garantia por escrito
+              e transpar&ecirc;ncia em todas as etapas.&rdquo;
+            </p>
+            <footer>
+              <span class="client-avatar" aria-hidden="true">CS</span>
+              <div class="client-meta">
+                <strong>Cl&aacute;udio S.</strong>
+                <span>Frotista</span>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="light" id="contato">
+      <div class="container">
+        <div class="cta-block">
+          <div class="cta-content">
+            <h2>Vamos cuidar do seu carro hoje?</h2>
+            <p>
+              Nossa equipe est&aacute; pronta para te atender pelo WhatsApp ou telefone e iniciar o
+              processo de or&ccedil;amento imediatamente.
+            </p>
+            <div class="cta-actions">
+              <a
+                class="btn-primary"
+                href="https://wa.me/5521964116948?text=Ol%C3%A1%20Giant!%20Quero%20agendar%20um%20or%C3%A7amento."
+                >Chamar no WhatsApp</a
+              >
+            </div>
+            <ul class="cta-list">
+              <li>Atendimento imediato com consultores especializados.</li>
+              <li>Tratativa direta com a sua seguradora, sem burocracia.</li>
+              <li>Envio de fotos do ve&iacute;culo e diagn&oacute;stico gratuito.</li>
+            </ul>
+          </div>
+          <div class="contact-box">
+            <div class="contact-item">
+              <strong>Atendimento imediato</strong>
+              WhatsApp direto: <a href="https://wa.me/5521964116948">+55 (21) 96411-6948</a>
+            </div>
+            <div class="contact-item">
+              <strong>Telefones das unidades</strong>
+              Botafogo: (21) 2266-1844 &bull; Zona Sul: (21) 3495-3804
+            </div>
+            <div class="contact-item">
+              <strong>Endere&ccedil;os</strong>
+              Rua Pinheiro Guimar&atilde;es 45-A &bull; Rua Visconde de Caravelas 55
+            </div>
+            <div class="contact-item">
+              <strong>Hor&aacute;rio de funcionamento</strong>
+              Segunda a sexta: 8h &agrave;s 18h &bull; S&aacute;bado: 8h &agrave;s 13h
+            </div>
+          </div>
+        </div>
+        <div class="section-header" style="margin-top: 80px">
+          <h2>Perguntas frequentes</h2>
+          <p>Algumas das principais d&uacute;vidas de quem agenda com a Giant.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>A Giant atende sinistros de todas as seguradoras?</summary>
+            <p>
+              Sim. Al&eacute;m de sermos referenciados, auxiliamos em toda a burocracia junto &agrave; sua
+              seguradora.
+            </p>
+          </details>
+          <details>
+            <summary>Posso acompanhar o andamento do servi&ccedil;o?</summary>
+            <p>
+              Enviamos atualiza&ccedil;&otilde;es com fotos das etapas e seu consultor est&aacute;
+              dispon&iacute;vel para esclarecimentos.
+            </p>
+          </details>
+          <details>
+            <summary>Voc&ecirc;s oferecem carro reserva?</summary>
+            <p>
+              Dependendo da sua ap&oacute;lice, verificamos a disponibilidade de carro reserva e
+              indicamos parceiros.
+            </p>
+          </details>
+          <details>
+            <summary>Qual &eacute; o prazo m&eacute;dio de entrega?</summary>
+            <p>
+              Reparos localizados s&atilde;o conclu&iacute;dos em at&eacute; 3 dias &uacute;teis. Projetos
+              completos podem levar entre 7 e 10 dias.
+            </p>
+          </details>
+        </div>
+        <div class="map">
+          <iframe
+            title="Como chegar na Giant Auto Mec&acirc;nica"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.9834575837816!2d-43.18786852392129!3d-22.91616354074708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f55a56b4fb7%3A0x5bf2cb5992bf5c53!2sR.%20Visc.%20de%20Caravelas%2C%2055%20-%20Botafogo%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022271-021!5e0!3m2!1spt-BR!2sbr!4v1707345600000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h4>Giant Auto Mec&acirc;nica</h4>
+            <p>
+              Padr&atilde;o premium em funilaria, pintura e mec&acirc;nica desde 1972. Duas unidades em
+              Botafogo para atender voc&ecirc; com agilidade.
+            </p>
+          </div>
+          <div>
+            <h4>Hor&aacute;rios</h4>
+            <ul>
+              <li>Segunda a sexta: 8h &agrave;s 18h</li>
+              <li>S&aacute;bado: 8h &agrave;s 13h</li>
+              <li>Emerg&ecirc;ncia via WhatsApp 24h</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contato r&aacute;pido</h4>
+            <ul>
+              <li><a href="tel:+5521970182069">Telefone: (21) 7018-2069</a></li>
+              <li>
+                <a href="mailto:contato@giantautomecanica.com.br"
+                  >contato@giantautomecanica.com.br</a
+                >
+              </li>
+            </ul>
+            <div class="social">
+              <a
+                href="https://www.facebook.com/GiantAutomecanica/"
+                aria-label="Facebook"
+                >FB</a
+              >
+              <a
+                href="https://www.instagram.com/giant_automecanica/"
+                aria-label="Instagram"
+                >IG</a
+              >
+              <a
+                href="https://www.youtube.com/channel/UC77wVYR-rdXi4Ud3Nd384Bw"
+                aria-label="YouTube"
+                >YT</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-note">
+          &copy; 2024 Giant Auto Mec&acirc;nica. Landing page conceito inspirada no site oficial da
+          marca.
+        </div>
+      </div>
+    </footer>
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/5521964116948?text=Ol%C3%A1%20Giant!%20Gostaria%20de%20um%20or%C3%A7amento."
+      aria-label="Falar com a Giant pelo WhatsApp"
+      target="_blank"
+      rel="noopener noreferrer"
+      >WA</a
+    >
+    <script>
+      (function () {
+        const header = document.querySelector(".main-header");
+        const offset = (header?.offsetHeight || 0) + 12;
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.getElementById("primary-menu");
+
+        const closeMenu = () => {
+          header?.classList.remove("menu-open");
+          menuToggle?.setAttribute("aria-expanded", "false");
+        };
+
+        menuToggle?.addEventListener("click", () => {
+          const isOpen = header?.classList.toggle("menu-open");
+          if (menuToggle) {
+            menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          }
+        });
+
+        nav?.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            closeMenu();
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          const target = event.target;
+          if (
+            header?.classList.contains("menu-open") &&
+            target instanceof Element &&
+            !nav?.contains(target) &&
+            !menuToggle?.contains(target)
+          ) {
+            closeMenu();
+          }
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 1024) {
+            closeMenu();
+          }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+          link.addEventListener("click", (event) => {
+            const targetId = link.getAttribute("href").slice(1);
+            const targetEl = document.getElementById(targetId);
+
+            if (targetEl) {
+              event.preventDefault();
+              const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+              window.scrollTo({ top, behavior: "smooth" });
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
